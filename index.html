@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Mundo RP LATAM, un mundo virtual donde tú creas tu propia historia.">
+
+    <title>Mundo RP LATAM</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- DISEÑO DEL BOTÓN DE DONACIONES -->
+    <style>
+        .boton-donaciones {
+            min-height: 43px;
+            padding: 0 18px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            flex-shrink: 0;
+            border: 2px solid #f5c451;
+            border-radius: 9px;
+            background: linear-gradient( 135deg, #7126b9, #a734e8 );
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 8px rgba(245, 196, 81, 0.9), 0 0 18px rgba(167, 52, 232, 0.8);
+            transition: transform 0.25s, box-shadow 0.25s;
+            animation: iluminarDonaciones 1.8s infinite alternate;
+        }
+
+            .boton-donaciones:hover {
+                transform: translateY(-3px) scale(1.04);
+                box-shadow: 0 0 12px rgba(245, 196, 81, 1), 0 0 28px rgba(167, 52, 232, 1), 0 0 45px rgba(113, 38, 185, 0.8);
+            }
+
+        .icono-donaciones {
+            font-size: 17px;
+        }
+
+        @keyframes iluminarDonaciones {
+            from {
+                box-shadow: 0 0 6px rgba(245, 196, 81, 0.7), 0 0 14px rgba(167, 52, 232, 0.6);
+            }
+
+            to {
+                box-shadow: 0 0 13px rgba(245, 196, 81, 1), 0 0 30px rgba(167, 52, 232, 1);
+            }
+        }
+
+        @media (max-width: 720px) {
+            .boton-donaciones {
+                width: 42px;
+                min-height: 42px;
+                padding: 0;
+            }
+
+            .texto-donaciones {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <header class="encabezado">
+
+        <a href="#inicio" class="logo">
+            <span class="logo-icono">MR</span>
+
+            <span class="logo-texto">
+                <strong>MUNDO RP</strong>
+                <small>LATAM</small>
+            </span>
+        </a>
+
+        <button class="boton-menu"
+                id="boton-menu"
+                aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#juego">El juego</a>
+            <a href="#novedades">Novedades</a>
+            <a href="#roles">Roles</a>
+            <a href="#tienda">Tienda</a>
+            <a href="#preguntas">Preguntas</a>
+        </nav>
+
+        <button class="boton-carrito"
+                id="abrir-carrito">
+            🛒 Carrito
+            <span id="cantidad-carrito">0</span>
+        </button>
+
+        <!-- BOTÓN DE DONACIONES -->
+        <a href="https://ko-fi.com/mundorp"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="boton-donaciones"
+           aria-label="Donar a Mundo RP mediante Ko-fi">
+            <span class="icono-donaciones">💜</span>
+            <span class="texto-donaciones">DONACIONES</span>
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- PORTADA PRINCIPAL -->
+        <section class="portada" id="inicio">
+
+            <div class="capa-portada"></div>
+
+            <div class="contenido-portada">
+
+                <p class="subtitulo">
+                    SERVIDOR LATINOAMERICANO
+                </p>
+
+                <h1>
+                    TU MUNDO.
+                    <span>TU HISTORIA.</span>
+                </h1>
+
+                <p class="descripcion-portada">
+                    Vive una ciudad sin límites. Elige tu profesión,
+                    crea alianzas y construye una historia que nadie
+                    olvidará.
+                </p>
+
+                <div class="botones-portada">
+
+                    <a href="#juego"
+                       class="boton boton-dorado">
+                        CONOCER EL JUEGO
+                    </a>
+
+                    <a href="#tienda"
+                       class="boton boton-transparente">
+                        VISITAR LA TIENDA
+                    </a>
+
+                </div>
+
+                <div class="estado-servidor">
+                    <span class="punto-verde"></span>
+
+                    Servidores en línea
+
+                    <strong>
+                        1,284 jugadores
+                    </strong>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN DEL JUEGO -->
+        <section class="seccion informacion"
+                 id="juego">
+
+            <div class="informacion-texto">
+
+                <p class="subtitulo">
+                    BIENVENIDO A LA CIUDAD
+                </p>
+
+                <h2>
+                    CREA LA VIDA QUE SIEMPRE IMAGINASTE
+                </h2>
+
+                <p>
+                    En Mundo RP cada decisión cambia tu camino.
+                    Empieza desde cero, consigue trabajo, crea un
+                    negocio, protege la ciudad o domina sus calles.
+                </p>
+
+                <div class="estadisticas">
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Ciudad activa</span>
+                    </div>
+
+                    <div>
+                        <strong>50+</strong>
+                        <span>Profesiones</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Roleplay</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tarjeta-informacion">
+
+                <div class="icono-grande">
+                    🌎
+                </div>
+
+                <h3>
+                    Una ciudad, miles de historias
+                </h3>
+
+                <p>
+                    Conoce jugadores de toda Latinoamérica y crea
+                    una historia completamente tuya.
+                </p>
+
+                <ul>
+                    <li>Economía y negocios</li>
+                    <li>Vehículos personalizables</li>
+                    <li>Casas y propiedades</li>
+                    <li>Eventos de la comunidad</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- NOVEDADES -->
+        <section class="seccion seccion-oscura"
+                 id="novedades">
+
+            <div class="titulo-seccion">
+
+                <p class="subtitulo">
+                    ÚLTIMAS ACTUALIZACIONES
+                </p>
+
+                <h2>
+                    NOVEDADES DE MUNDO RP
+                </h2>
+
+                <p>
+                    Mantente informado sobre eventos, nuevas
+                    funciones y cambios dentro de la ciudad.
+                </p>
+
+            </div>
+
+            <div class="contenedor-novedades">
+
+                <article class="tarjeta-novedad">
+
+                    <div class="imagen-novedad actualizacion">
+                        <span>ACTUALIZACIÓN</span>
+                        <strong>2.5</strong>
+                    </div>
+
+                    <div class="contenido-novedad">
+
+                        <small>
+                            16 SEPTIEMBRE 2026
+                        </small>
+
+                        <h3>
+                            Nueva actualización de la ciudad
+                        </h3>
+
+                        <p>
+                            Nuevos vehículos, empleos y mejoras
+                            para ofrecer una experiencia más
+                            realista.
+                        </p>
+
+                        <a href="#preguntas">
+                            Leer detalles →
+                        </a>
+
+                    </div>
+                </article>
+
+                <article class="tarjeta-novedad">
+
+                    <div class="imagen-novedad evento">
+                        <span>EVENTO</span>
+                        <strong>🏁</strong>
+                    </div>
+
+                    <div class="contenido-novedad">
+
+                        <small>
+                            20 SEPTIEMBRE 2026
+                        </small>
+
+                        <h3>
+                            Gran carrera urbana
+                        </h3>
+
+                        <p>
+                            Participa con tu equipo y compite por
+                            premios exclusivos dentro del servidor.
+                        </p>
+
+                        <a href="#comunidad">
+                            Participar →
+                        </a>
+
+                    </div>
+                </article>
+
+                <article class="tarjeta-novedad">
+
+                    <div class="imagen-novedad comunidad">
+                        <span>COMUNIDAD</span>
+                        <strong>🤝</strong>
+                    </div>
+
+                    <div class="contenido-novedad">
+
+                        <small>
+                            12 SEPTIEMBRE 2026
+                        </small>
+
+                        <h3>
+                            Nuevas organizaciones
+                        </h3>
+
+                        <p>
+                            Crea tu organización, recluta miembros
+                            y gana reconocimiento dentro de la
+                            ciudad.
+                        </p>
+
+                        <a href="#roles">
+                            Descubrir →
+                        </a>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ROLES -->
+        <section class="seccion seccion-roles"
+                 id="roles">
+
+            <div class="titulo-seccion">
+
+                <p class="subtitulo">
+                    ELIGE TU CAMINO
+                </p>
+
+                <h2>
+                    ¿QUIÉN SERÁS EN MUNDO RP?
+                </h2>
+
+            </div>
+
+            <div class="botones-roles">
+
+                <button class="boton-rol activo"
+                        data-rol="policia">
+                    Policía
+                </button>
+
+                <button class="boton-rol"
+                        data-rol="medico">
+                    Médico
+                </button>
+
+                <button class="boton-rol"
+                        data-rol="empresario">
+                    Empresario
+                </button>
+
+                <button class="boton-rol"
+                        data-rol="urbano">
+                    Vida urbana
+                </button>
+
+            </div>
+
+            <div class="informacion-rol">
+
+                <div class="icono-rol"
+                     id="icono-rol">
+                    🛡️
+                </div>
+
+                <div>
+
+                    <p class="subtitulo"
+                       id="subtitulo-rol">
+                        PROTEGE LA CIUDAD
+                    </p>
+
+                    <h3 id="titulo-rol">
+                        Haz cumplir la ley
+                    </h3>
+
+                    <p id="descripcion-rol">
+                        Patrulla las calles, responde emergencias
+                        y asciende dentro del cuerpo policial.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TIENDA -->
+        <section class="seccion seccion-tienda"
+                 id="tienda">
+
+            <div class="titulo-seccion">
+
+                <p class="subtitulo">
+                    TIENDA OFICIAL
+                </p>
+
+                <h2>
+                    MEJORA TU EXPERIENCIA
+                </h2>
+
+                <p>
+                    Consigue monedas y beneficios para personalizar
+                    tu historia dentro de Mundo RP.
+                </p>
+
+            </div>
+
+            <div class="contenedor-productos"
+                 id="contenedor-productos">
+                <!-- Los productos aparecen mediante JavaScript -->
+            </div>
+
+            <p class="seguridad-compra">
+                🔒 Compra protegida · Entrega digital ·
+                Soporte disponible
+            </p>
+
+        </section>
+
+        <!-- COMUNIDAD -->
+        <section class="seccion-comunidad"
+                 id="comunidad">
+
+            <div>
+
+                <p class="subtitulo">
+                    NUESTRA COMUNIDAD
+                </p>
+
+                <h2>
+                    LA CIUDAD TAMBIÉN VIVE FUERA DEL JUEGO
+                </h2>
+
+                <p>
+                    Conecta con otros jugadores, participa en
+                    eventos y entérate primero de todas las
+                    novedades.
+                </p>
+
+                <div class="redes-sociales">
+                    <a href="#">Discord</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">YouTube</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES -->
+        <section class="seccion seccion-oscura"
+                 id="preguntas">
+
+            <div class="titulo-seccion">
+
+                <p class="subtitulo">
+                    CENTRO DE AYUDA
+                </p>
+
+                <h2>
+                    PREGUNTAS FRECUENTES
+                </h2>
+
+            </div>
+
+            <div class="preguntas">
+
+                <details>
+
+                    <summary>
+                        ¿Qué es Mundo RP?
+                    </summary>
+
+                    <p>
+                        Es una experiencia de roleplay multijugador
+                        donde puedes crear un personaje, elegir una
+                        profesión y construir tu propia historia.
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+                        ¿Puedo jugar con mis amigos?
+                    </summary>
+
+                    <p>
+                        Sí. Pueden entrar al mismo servidor, formar
+                        una organización, trabajar juntos y
+                        participar en eventos.
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+                        ¿Cómo recibo lo que compro?
+                    </summary>
+
+                    <p>
+                        Los artículos digitales quedan asociados
+                        al ID del jugador indicado durante el
+                        proceso de compra.
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+                        ¿En qué plataformas estará disponible?
+                    </summary>
+
+                    <p>
+                        Mundo RP está diseñado para una experiencia
+                        multiplataforma. Las descargas oficiales
+                        aparecerán en esta página.
+                    </p>
+
+                </details>
+
+            </div>
+        </section>
+
+        <!-- LLAMADO FINAL -->
+        <section class="seccion-final">
+
+            <p class="subtitulo">
+                TU HISTORIA TE ESPERA
+            </p>
+
+            <h2>
+                ENTRA A MUNDO RP
+            </h2>
+
+            <p>
+                La ciudad está lista. Solo falta tu personaje.
+            </p>
+
+            <a href="#inicio"
+               class="boton boton-dorado">
+                JUGAR PRÓXIMAMENTE
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <div class="logo logo-footer">
+
+            <span class="logo-icono">
+                MR
+            </span>
+
+            <span class="logo-texto">
+                <strong>MUNDO RP</strong>
+                <small>LATAM</small>
+            </span>
+
+        </div>
+
+        <p>
+            Una experiencia de roleplay creada para
+            Latinoamérica.
+        </p>
+
+        <div class="enlaces-footer">
+            <a href="#juego">El juego</a>
+            <a href="#novedades">Novedades</a>
+            <a href="#tienda">Tienda</a>
+            <a href="#preguntas">Ayuda</a>
+        </div>
+
+        <p class="derechos">
+            © <span id="anio"></span> Mundo RP LATAM.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <!-- FONDO DEL CARRITO -->
+    <div class="fondo-carrito"
+         id="fondo-carrito"></div>
+
+    <!-- CARRITO DE COMPRAS -->
+    <aside class="carrito"
+           id="carrito">
+
+        <div class="encabezado-carrito">
+
+            <div>
+                <p class="subtitulo">
+                    TU PEDIDO
+                </p>
+
+                <h2>
+                    Carrito
+                </h2>
+            </div>
+
+            <button id="cerrar-carrito"
+                    aria-label="Cerrar carrito">
+                ×
+            </button>
+
+        </div>
+
+        <div id="productos-carrito"></div>
+
+        <div class="carrito-vacio"
+             id="carrito-vacio">
+
+            <span>🛒</span>
+
+            <h3>
+                Tu carrito está vacío
+            </h3>
+
+            <p>
+                Explora la tienda y elige tu próximo beneficio.
+            </p>
+
+        </div>
+
+        <div class="resumen-carrito"
+             id="resumen-carrito">
+
+            <div>
+                <span>Total</span>
+
+                <strong id="total-carrito">
+                    US$0.00
+                </strong>
+            </div>
+
+            <button class="boton boton-dorado boton-completo"
+                    id="finalizar-compra">
+                CONTINUAR COMPRA
+            </button>
+
+            <small>
+                Todos los artículos son digitales.
+            </small>
+
+        </div>
+    </aside>
+
+    <!-- FORMULARIO DE COMPRA -->
+    <div class="ventana-compra"
+         id="ventana-compra">
+
+        <div class="contenido-compra">
+
+            <button class="cerrar-compra"
+                    id="cerrar-compra"
+                    aria-label="Cerrar formulario">
+                ×
+            </button>
+
+            <div id="formulario-contenido">
+
+                <p class="subtitulo">
+                    FINALIZAR PEDIDO
+                </p>
+
+                <h2>
+                    Datos del jugador
+                </h2>
+
+                <form id="formulario-compra">
+
+                    <label>
+                        Nombre completo
+
+                        <input type="text"
+                               name="nombre"
+                               placeholder="Escribe tu nombre"
+                               required>
+                    </label>
+
+                    <label>
+                        Correo electrónico
+
+                        <input type="email"
+                               name="correo"
+                               placeholder="nombre@correo.com"
+                               required>
+                    </label>
+
+                    <label>
+                        ID de jugador
+
+                        <input type="text"
+                               name="jugador"
+                               placeholder="Ejemplo: MRP-123456"
+                               required>
+                    </label>
+
+                    <label>
+                        Método de pago
+
+                        <select name="pago"
+                                required>
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="tarjeta">
+                                Tarjeta de crédito o débito
+                            </option>
+
+                            <option value="paypal">
+                                PayPal
+                            </option>
+                        </select>
+                    </label>
+
+                    <div class="total-compra">
+
+                        <span>
+                            Total del pedido
+                        </span>
+
+                        <strong id="total-formulario">
+                            US$0.00
+                        </strong>
+
+                    </div>
+
+                    <button type="submit"
+                            class="boton boton-dorado boton-completo">
+                        CONFIRMAR PEDIDO
+                    </button>
+
+                    <p class="aviso-demostracion">
+                        Demostración: no se realizará ningún
+                        cobro real.
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="mensaje-exito"
+                 id="mensaje-exito">
+
+                <span>✓</span>
+
+                <h2>
+                    ¡Pedido recibido!
+                </h2>
+
+                <p>
+                    Tu número de orden es
+
+                    <strong id="numero-orden"></strong>.
+                </p>
+
+                <button class="boton boton-dorado"
+                        id="terminar-compra">
+                    FINALIZAR
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- NOTIFICACIÓN -->
+    <div class="notificacion"
+         id="notificacion"></div>
+
+</body>
+</html>
