@@ -5,6 +5,10 @@ Página web desarrollada para el proyecto Mundo RP.
 ## Demo
   
   [Ver página web](https://espinal-27.github.io/mundo-rp/)
+  
+  ## Vista previa
+
+![Mundo RP](screenshotsmundo-rp.png)
 
 ## Descripción
 
